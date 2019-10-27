@@ -30,7 +30,7 @@ app.engine("handlebars", exphbs({
 app.set("view engine", "handlebars");
 
 
-var databaseUri = "mongodb://localhost/week18Populater";
+var databaseUri = "mongodb://localhost/articles";
 
 if (process.env.MONGODB_URI){
   mongoose.connect(process.env.MONGODB_URI);
@@ -239,7 +239,7 @@ app.delete("/notes/delete/:note_id/:article_id", function(req, res) {
   });
 });
 
-// Listen on port
+
 app.listen(port, function() {
   console.log("Server running on port " + port);
 });
